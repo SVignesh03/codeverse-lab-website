@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ededed;
+    --foreground: #0a0a0a;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Add this to global.css if you want precise arrow placement */
+.custom-arrow {
+  position: absolute;
+  bottom: -60px;
+  z-index: 10;
+}
+
+.left-arrow {
+  left: 45%;
+  transform: translateX(-150%);
+}
+
+.right-arrow {
+  right: 45%;
+  transform: translateX(150%);
+}
