@@ -17,7 +17,6 @@ const textVariants = {
     },
   }),
 };
-  
 
 const paragraph =
   "Codeverse Lab helps you bring your ideas to life through thoughtful strategy, design, and development—crafted with care, from start to finish.";

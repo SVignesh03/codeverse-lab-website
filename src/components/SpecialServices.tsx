@@ -43,7 +43,6 @@ const services = [
     delay: 500,
   },
 ];
-  
 
 export default function SpecialServices() {
   useEffect(() => {

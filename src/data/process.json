@@ -1,0 +1,32 @@
+[
+  {
+    "step": "01",
+    "title": "Discovery",
+    "description": "We start by understanding your business, goals, and target audience through detailed consultation."
+  },
+  {
+    "step": "02",
+    "title": "Strategy",
+    "description": "We develop a comprehensive strategy and project roadmap tailored to your specific needs."
+  },
+  {
+    "step": "03",
+    "title": "Design",
+    "description": "Our designers create stunning visuals and user experiences that align with your brand."
+  },
+  {
+    "step": "04",
+    "title": "Development",
+    "description": "Our developers bring the designs to life with clean, efficient, and scalable code."
+  },
+  {
+    "step": "05",
+    "title": "Testing",
+    "description": "Rigorous testing ensures everything works perfectly across all devices and browsers."
+  },
+  {
+    "step": "06",
+    "title": "Launch",
+    "description": "We deploy your project and provide ongoing support to ensure continued success."
+  }
+]

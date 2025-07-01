@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "Fish Meat Sale Website",
+    "category": "E-commerce",
+    "description": "Modern e-commerce website with clean design and smooth animations",
+    "image": "/projects/fish-website.png",
+    "technologies": [
+      "React",
+      "Next.js",
+      "Tailwind CSS",
+      "Vite",
+      "TypeScript",
+      "Clerk"
+    ],
+    "liveUrl": "#"
+  }
+]

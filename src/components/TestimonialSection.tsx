@@ -6,36 +6,12 @@ import "slick-carousel/slick/slick-theme.css";
 
 const testimonials = [
   {
-    name: "Mark Parker",
-    image: "/assets/img/testimonial/ellipse1.png",
-    role: "Envato Customer",
+    name: "Rubesh",
+    image: "/assets/img/testimonial/default.png",
+    role: "Fish website owner",
     rating: 4.8,
     message:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut scelerisque arcu, at porttitor lacus. Integer iaculis quis magna a aliquam. Vestibulum iaculis.",
-  },
-  {
-    name: "Mark Parker",
-    image: "/assets/img/testimonial/ellipse2.png",
-    role: "Envato Customer",
-    rating: 4.8,
-    message:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut scelerisque arcu, at porttitor lacus. Integer iaculis quis magna a aliquam. Vestibulum iaculis.",
-  },
-  {
-    name: "Mark Parker",
-    image: "/assets/img/testimonial/ellipse3.png",
-    role: "Envato Customer",
-    rating: 4.8,
-    message:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut scelerisque arcu, at porttitor lacus. Integer iaculis quis magna a aliquam. Vestibulum iaculis.",
-  },
-  {
-    name: "Mark Parker",
-    image: "/assets/img/testimonial/ellipse1.png",
-    role: "Envato Customer",
-    rating: 4.8,
-    message:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut scelerisque arcu, at porttitor lacus. Integer iaculis quis magna a aliquam. Vestibulum iaculis.",
+      "Working with Codeverse Lab has been an absolute game-changer for our business. From the very beginning, they took the time to deeply understand our vision and transformed it into a sleek, high-performing digital product.",
   },
 ];
 
@@ -44,7 +20,7 @@ const CustomPrevArrow = ({ onClick }: any) => (
     onClick={onClick}
     className="absolute -bottom-16 left-1/2 transform -translate-x-20 z-10"
   >
-    <button className="w-10 h-10 bg-[#FF4C60] text-white rounded-full text-xl">
+    <button className="w-10 h-10 bg-orange-500 text-white rounded-full text-xl shadow hover:bg-orange-600 transition">
       ←
     </button>
   </div>
@@ -55,14 +31,14 @@ const CustomNextArrow = ({ onClick }: any) => (
     onClick={onClick}
     className="absolute -bottom-16 left-1/2 transform translate-x-20 z-10"
   >
-    <button className="w-10 h-10 bg-[#FF4C60] text-white rounded-full text-xl">
+    <button className="w-10 h-10 bg-orange-500 text-white rounded-full text-xl shadow hover:bg-orange-600 transition">
       →
     </button>
   </div>
 );
 
 const TestimonialSection: React.FC = () => {
-  const settings = {
+  const sliderSettings = {
     dots: false,
     infinite: true,
     speed: 600,
@@ -88,44 +64,52 @@ const TestimonialSection: React.FC = () => {
     ],
   };
 
+  const renderTestimonial = (item: (typeof testimonials)[0]) => (
+    <div className="px-4">
+      <div className="p-6 bg-white border border-orange-100 rounded-2xl shadow-sm h-full text-left hover:shadow-md transition">
+        <div className="flex items-center mb-4">
+          <img
+            src={item.image}
+            alt={item.name}
+            className="w-12 h-12 rounded-full mr-4"
+          />
+          <div>
+            <h4 className="text-lg font-semibold text-orange-900">
+              {item.name}
+            </h4>
+            <p className="text-sm text-orange-500">{item.role}</p>
+          </div>
+          <div className="ml-auto text-orange-500 font-semibold flex items-center">
+            <span className="text-xl mr-1">★</span>({item.rating})
+          </div>
+        </div>
+        <p className="text-orange-900/80 text-sm">{item.message}</p>
+      </div>
+    </div>
+  );
+
   return (
-    <section className="py-16 bg-[#fff5f6] text-center">
+    <section className="py-16 bg-orange-50 text-center">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-4xl font-bold text-[#1d0e41] mb-4">
-          Thousands Of Clients Trust Us
+        <h2 className="text-4xl font-bold text-orange-600 mb-4">
+          Every Clients Trust Us
         </h2>
-        <p className="text-[#6f6f87] mb-12 max-w-3xl mx-auto">
-          Sed sit amet suscipit diam, vel iaculis nunc. Mauris interdum
-          sollicitudin ex. Sed sit amet felis id dolor blandit pellentesque.
-          Praesent varius euismod velit, non tincidunt lacus.
+        <p className="text-orange-800/80 mb-12 max-w-3xl mx-auto">
+          Some top reviews by the Clients
         </p>
 
         <div className="relative">
-          <Slider {...settings}>
-            {testimonials.map((item, index) => (
-              <div key={index} className="px-4">
-                <div className="p-6 bg-white border border-gray-200 rounded-2xl shadow-md h-full text-left">
-                  <div className="flex items-center mb-4">
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      className="w-12 h-12 rounded-full mr-4"
-                    />
-                    <div>
-                      <h4 className="text-lg font-semibold text-[#1d0e41]">
-                        {item.name}
-                      </h4>
-                      <p className="text-sm text-gray-500">{item.role}</p>
-                    </div>
-                    <div className="ml-auto text-[#FF4C60] font-semibold flex items-center">
-                      <span className="text-xl mr-1">★</span>({item.rating})
-                    </div>
-                  </div>
-                  <p className="text-gray-700 text-sm">{item.message}</p>
-                </div>
-              </div>
-            ))}
-          </Slider>
+          {testimonials.length < 3 ? (
+            <div className="max-w-md mx-auto">
+              {renderTestimonial(testimonials[0])}
+            </div>
+          ) : (
+            <Slider {...sliderSettings}>
+              {testimonials.map((item, index) => (
+                <div key={index}>{renderTestimonial(item)}</div>
+              ))}
+            </Slider>
+          )}
         </div>
       </div>
     </section>

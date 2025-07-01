@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Innovation",
+    "description": "We stay ahead of the curve with cutting-edge technologies and creative solutions.",
+    "icon": "💡"
+  },
+  {
+    "title": "Quality",
+    "description": "Every project is crafted with meticulous attention to detail and highest standards.",
+    "icon": "⭐"
+  },
+  {
+    "title": "Collaboration",
+    "description": "We work closely with our clients as partners to achieve shared success.",
+    "icon": "🤝"
+  },
+  {
+    "title": "Transparency",
+    "description": "Open communication and honest feedback throughout every project phase.",
+    "icon": "🔍"
+  }
+]

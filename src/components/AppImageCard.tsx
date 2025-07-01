@@ -5,9 +5,14 @@ type AppImageCardProps = {
   file: string;
   active: boolean;
   focus: boolean;
+  className?: string;
 };
 
-export default function AppImageCard({ file, focus }: AppImageCardProps) {
+export default function AppImageCard({
+  file,
+  focus,
+  className = "",
+}: AppImageCardProps) {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -25,12 +30,12 @@ export default function AppImageCard({ file, focus }: AppImageCardProps) {
     <div
       className={`relative w-full h-full rounded-2xl overflow-hidden shadow-md group transition-all duration-300 ${
         isFilteredOut ? "opacity-30" : ""
-      }`}
+      } ${className}`}
       style={{
         padding: "clamp(0.25rem, 1vw, 0.75rem)",
       }}
     >
-      <div className="relative w-full h-full flex items-center justify-center bg-blue-500 rounded-xl">
+      <div className="relative w-full h-full flex items-center justify-center bg-orange-100 rounded-xl">
         <Image
           src={`/images/${file}`}
           alt=""

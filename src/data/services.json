@@ -1,0 +1,57 @@
+[
+  {
+    "icon": "Palette",
+    "title": "Web Design",
+    "description": "Beautiful, user-centered designs that captivate and convert",
+    "features": [
+      "UI/UX Design",
+      "Responsive Design",
+      "Brand Integration",
+      "Prototyping"
+    ]
+  },
+  {
+    "icon": "Code",
+    "title": "Web Development",
+    "description": "Robust, scalable websites built with modern technologies",
+    "features": [
+      "Custom Development",
+      "CMS Integration",
+      "API Development",
+      "Performance Optimization"
+    ]
+  },
+  {
+    "icon": "Smartphone",
+    "title": "Mobile Apps",
+    "description": "Native and cross-platform mobile applications",
+    "features": [
+      "iOS Development",
+      "Android Development",
+      "React Native",
+      "App Store Optimization"
+    ]
+  },
+  {
+    "icon": "ShoppingCart",
+    "title": "E-commerce",
+    "description": "Complete online stores that drive sales and growth",
+    "features": [
+      "Shopify Development",
+      "WooCommerce",
+      "Payment Integration",
+      "Inventory Management"
+    ]
+  },
+  {
+    "icon": "BarChart3",
+    "title": "Analytics & Insights",
+    "description": "Data-driven insights to optimize your digital presence",
+    "features": [
+      "Google Analytics",
+      "Conversion Tracking",
+      "Performance Reports",
+      "A/B Testing"
+    ]
+  }
+]
