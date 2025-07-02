@@ -4,45 +4,9 @@ import Image from "next/image";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import special_services from "@/data/special_services.json";
 
-const services = [
-  {
-    title: "Web Design",
-    text: "Crafting visually stunning and user-friendly interfaces that elevate brand identity and user experience.",
-    image: "special_services02.svg",
-    delay: 0,
-  },
-  {
-    title: "UI Design",
-    text: "Designing intuitive, responsive layouts to ensure seamless interaction across all platforms.",
-    image: "special_services03.svg",
-    delay: 100,
-  },
-  {
-    title: "Web Development",
-    text: "Building scalable, performant websites and applications using modern web technologies.",
-    image: "special_services04.svg",
-    delay: 200,
-  },
-  {
-    title: "Support",
-    text: "Providing reliable, ongoing technical support to ensure systems run smoothly and issues are resolved quickly.",
-    image: "special_services06.svg",
-    delay: 300,
-  },
-  {
-    title: "Automation",
-    text: "Streamlining workflows with intelligent automation to boost efficiency and reduce manual effort.",
-    image: "special_services01.svg", // reusing this unless you have a separate automation SVG
-    delay: 400,
-  },
-  {
-    title: "Data Engineering",
-    text: "Designing robust data pipelines and infrastructure to support real-time analytics and decision-making.",
-    image: "special_services05.svg", // reusing this unless you have a data-specific SVG
-    delay: 500,
-  },
-];
+const services = special_services;
 
 export default function SpecialServices() {
   useEffect(() => {

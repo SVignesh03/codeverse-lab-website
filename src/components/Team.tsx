@@ -2,35 +2,20 @@
 import { useState } from "react";
 import AppTabButton from "./AppTabButton";
 import AppImageCard from "./AppImageCard";
+import characters from "@/data/characters.json";
+import departments from "@/data/departments.json";
 
-type Department = {
-  name: string;
-};
+// type Department = {
+//   name: string;
+// };
 
-type Character = {
-  id: number;
-  name: string;
-  department: string;
-  role: string;
-  file: string;
-};
-
-const departments: Department[] = [
-  { name: "Design" },
-  { name: "Marketing" },
-  { name: "Development" },
-];
-
-const characters: Character[] = [
-  {
-    id: 1,
-    name: "Vignesh",
-    department: "Development",
-    role: "Full Stack Developer",
-    file: "vignesh.png",
-  },
-  // Add others as needed
-];
+// type Character = {
+//   id: number;
+//   name: string;
+//   department: string;
+//   role: string;
+//   file: string;
+// };
 
 export default function Team() {
   const [activeDept, setActiveDept] = useState<string>("");

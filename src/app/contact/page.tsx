@@ -6,6 +6,8 @@ import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import ourservices from "@/data/ourservices.json";
+import budgetRanges from "@/data/budgetranges.json";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -22,24 +24,7 @@ const contactSchema = z.object({
 
 type ContactFormData = z.infer<typeof contactSchema>;
 
-const services = [
-  "Web Design",
-  "Web Development",
-  "Mobile App Development",
-  "E-commerce Development",
-  // "SEO & Marketing",
-  "Consulting",
-  "Other",
-];
-
-const budgetRanges = [
-  "Under ₹5,000",
-  "₹5,000 - ₹10,000",
-  "₹10,000 - ₹25,000",
-  "₹25,000 - ₹50,000",
-  "₹50,000+",
-  "Let's discuss",
-];
+const services = ourservices;
 
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -102,8 +87,8 @@ export default function ContactPage() {
               transition={{ delay: 0.2 }}
               className="text-xl text-gray-600 max-w-3xl mx-auto"
             >
-              Ready to start your project? Let's discuss how we can help bring
-              your vision to life.
+              Ready to start your project? Let&apos;s discuss how we can help
+              bring your vision to life.
             </motion.p>
           </div>
         </div>
@@ -121,11 +106,11 @@ export default function ContactPage() {
             >
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                  Let's Start a Conversation
+                  Let&apos;s Start a Conversation
                 </h2>
                 <p className="text-gray-600 text-lg">
-                  We'd love to hear about your project and discuss how we can
-                  help. Reach out to us using any of the methods below.
+                  We&apos;d love to hear about your project and discuss how we
+                  can help. Reach out to us using any of the methods below.
                 </p>
               </div>
 
@@ -189,8 +174,8 @@ export default function ContactPage() {
                     Message Sent!
                   </h3>
                   <p className="text-gray-600">
-                    Thank you for reaching out. We'll get back to you within 24
-                    hours.
+                    Thank you for reaching out. We&apos;ll get back to you
+                    within 24 hours.
                   </p>
                 </div>
               ) : (

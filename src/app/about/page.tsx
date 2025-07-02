@@ -14,6 +14,14 @@ const iconMap = {
   Clock,
 };
 
+type IconKey = keyof typeof iconMap;
+
+type Stat = {
+  icon: IconKey;
+  label: string;
+  value: string;
+};
+
 export default function AboutPage() {
   return (
     <div className="pt-20">
@@ -34,8 +42,8 @@ export default function AboutPage() {
               transition={{ delay: 0.2 }}
               className="text-xl text-gray-600 max-w-3xl mx-auto"
             >
-              We're a passionate team of designers and developers dedicated to
-              creating exceptional digital experiences that drive business
+              We&apos;re a passionate team of designers and developers dedicated
+              to creating exceptional digital experiences that drive business
               growth.
             </motion.p>
           </div>
@@ -46,7 +54,7 @@ export default function AboutPage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => {
+            {(stats as Stat[]).map((stat, index) => {
               const IconComponent = iconMap[stat.icon];
               return (
                 <motion.div
@@ -95,7 +103,7 @@ export default function AboutPage() {
                 <p>
                   Today, we continue to push boundaries, embrace new
                   technologies, and deliver solutions that not only meet our
-                  client's needs but exceed their expectations.
+                  client&apos;s needs but exceed their expectations.
                 </p>
               </div>
             </motion.div>
@@ -157,7 +165,7 @@ export default function AboutPage() {
               Ready to Work Together?
             </h2>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Let's discuss how we can help bring your vision to life
+              Let&apos;s discuss how we can help bring your vision to life
             </p>
             <a
               href="/contact"

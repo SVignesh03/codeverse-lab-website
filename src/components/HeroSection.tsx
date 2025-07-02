@@ -1,22 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
+import type { TargetAndTransition } from "framer-motion";
 
-const textVariants = {
-  hidden: (i: number) => ({
-    opacity: 0,
-    x: i % 2 === 0 ? -40 : 40, // Even: slide from left, Odd: from right
-  }),
-  visible: (i: number) => ({
-    opacity: 1,
-    x: 0,
-    transition: {
-      delay: i * 0.1,
-      duration: 0.6,
-      ease: "easeOut",
-    },
-  }),
-};
+const createTextVariants = (i: number): TargetAndTransition => ({
+  opacity: 1,
+  x: 0,
+  transition: {
+    delay: i * 0.1,
+    duration: 0.6,
+    ease: "easeOut",
+  },
+});
 
 const paragraph =
   "Codeverse Lab helps you bring your ideas to life through thoughtful strategy, design, and development—crafted with care, from start to finish.";
@@ -36,7 +31,7 @@ export default function HeroSection() {
         Your browser does not support the video tag.
       </video>
 
-      {/* Semi-transparent Overlay */}
+      {/* Overlay */}
       <div className="absolute inset-0 bg-black/30 z-10" />
 
       {/* Content */}
@@ -55,9 +50,8 @@ export default function HeroSection() {
             <motion.span
               key={i}
               custom={i}
-              initial="hidden"
-              animate="visible"
-              variants={textVariants}
+              initial={{ opacity: 0, x: i % 2 === 0 ? -40 : 40 }}
+              animate={createTextVariants(i)}
               className="inline-block mr-1"
             >
               {word}
@@ -65,9 +59,8 @@ export default function HeroSection() {
           ))}
           <motion.span
             custom={7}
-            initial="hidden"
-            animate="visible"
-            variants={textVariants}
+            initial={{ opacity: 0, x: 40 }}
+            animate={createTextVariants(7)}
             className="relative inline-block ml-2"
           >
             Codeverse Lab
@@ -88,9 +81,8 @@ export default function HeroSection() {
             <motion.span
               key={i}
               custom={i}
-              initial="hidden"
-              animate="visible"
-              variants={textVariants}
+              initial={{ opacity: 0, x: i % 2 === 0 ? -40 : 40 }}
+              animate={createTextVariants(i)}
               className="inline-block mr-1"
             >
               {word}
@@ -98,7 +90,7 @@ export default function HeroSection() {
           ))}
         </div>
 
-        {/* Call to Action */}
+        {/* CTA Button */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}

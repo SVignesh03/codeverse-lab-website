@@ -1,21 +1,16 @@
 "use client";
-import React from "react";
+import React, { MouseEventHandler } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Image from "next/image";
+import testimonials from "@/data/testimonials.json";
 
-const testimonials = [
-  {
-    name: "Rubesh",
-    image: "/assets/img/testimonial/default.png",
-    role: "Fish website owner",
-    rating: 4.8,
-    message:
-      "Working with Codeverse Lab has been an absolute game-changer for our business. From the very beginning, they took the time to deeply understand our vision and transformed it into a sleek, high-performing digital product.",
-  },
-];
+type ArrowProps = {
+  onClick?: MouseEventHandler<HTMLDivElement>;
+};
 
-const CustomPrevArrow = ({ onClick }: any) => (
+const CustomPrevArrow = ({ onClick }: ArrowProps) => (
   <div
     onClick={onClick}
     className="absolute -bottom-16 left-1/2 transform -translate-x-20 z-10"
@@ -26,7 +21,7 @@ const CustomPrevArrow = ({ onClick }: any) => (
   </div>
 );
 
-const CustomNextArrow = ({ onClick }: any) => (
+const CustomNextArrow = ({ onClick }: ArrowProps) => (
   <div
     onClick={onClick}
     className="absolute -bottom-16 left-1/2 transform translate-x-20 z-10"
@@ -68,10 +63,12 @@ const TestimonialSection: React.FC = () => {
     <div className="px-4">
       <div className="p-6 bg-white border border-orange-100 rounded-2xl shadow-sm h-full text-left hover:shadow-md transition">
         <div className="flex items-center mb-4">
-          <img
-            src={item.image}
-            alt={item.name}
-            className="w-12 h-12 rounded-full mr-4"
+          <Image
+            src="/path"
+            alt="..."
+            width={48}
+            height={48}
+            className="rounded-full"
           />
           <div>
             <h4 className="text-lg font-semibold text-orange-900">

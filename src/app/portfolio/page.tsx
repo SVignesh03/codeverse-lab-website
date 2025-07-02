@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 import projects from "@/data/projects.json";
 
@@ -41,8 +41,8 @@ export default function PortfolioPage() {
               transition={{ delay: 0.2 }}
               className="text-xl text-gray-600 max-w-3xl mx-auto"
             >
-              Explore our latest projects and see how we've helped businesses
-              achieve their digital goals
+              Explore our latest projects and see how we&apos;ve helped
+              businesses achieve their digital goals
             </motion.p>
           </div>
         </div>
@@ -129,7 +129,8 @@ export default function PortfolioPage() {
               Like What You See?
             </h2>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Let's create something amazing together. Start your project today!
+              Let&apos;s create something amazing together. Start your project
+              today!
             </p>
             <a
               href="/contact"

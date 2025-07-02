@@ -38,7 +38,9 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => {
-              const Icon = Icons[service.icon as keyof typeof Icons];
+              const Icon = Icons[
+                service.icon as keyof typeof Icons
+              ] as React.FC<{ className?: string }>;
               return (
                 <motion.div
                   key={service.title}
@@ -118,8 +120,8 @@ export default function ServicesPage() {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Let's discuss your project and see how we can help you achieve
-              your goals
+              Let&apos;s discuss your project and see how we can help you
+              achieve your goals
             </p>
             <a
               href="/contact"
