@@ -7,7 +7,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import ourservices from "@/data/ourservices.json";
-import budgetRanges from "@/data/budgetranges.json";
+import budgetRanges from "@/data/budgetRanges.json";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
