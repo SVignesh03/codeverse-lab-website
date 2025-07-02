@@ -96,7 +96,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 3, duration: 0.5 }}
         >
-          <a href="#" target="_blank">
+          <a href="/contact">
             <button className="bg-gradient-to-r from-orange-500 to-amber-500 text-white rounded-xl font-space-grotesk px-4 py-2 focus:outline-none focus:ring-2 focus:ring-offset-2 cursor-pointer">
               Schedule a Free Consultation
             </button>
