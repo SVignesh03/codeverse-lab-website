@@ -64,7 +64,7 @@ const TestimonialSection: React.FC = () => {
       <div className="p-6 bg-white border border-orange-100 rounded-2xl shadow-sm h-full text-left hover:shadow-md transition">
         <div className="flex items-center mb-4">
           <Image
-            src="/assets/img/testimonials/default.png"
+            src="/assets/img/testimonial/default.png"
             alt="..."
             width={48}
             height={48}
