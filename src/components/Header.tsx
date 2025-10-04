@@ -47,7 +47,7 @@ const Header = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <Image
-              src="/logo.png"
+              src="https://res.cloudinary.com/dau24dmlo/image/upload/v1750933747/Codeverse_Lab_xzrfyo.png"
               alt="Codeverse Lab Logo"
               width={60}
               height={60}
@@ -102,13 +102,13 @@ const Header = () => {
             {isMobileMenuOpen ? (
               <X
                 className={`w-6 h-6 ${
-                  isScrolled ? "text-gray-900" : "text-white"
+                  isHomePage ? "text-white" : "text-gray-900"
                 }`}
               />
             ) : (
               <Menu
                 className={`w-6 h-6 ${
-                  isScrolled ? "text-gray-900" : "text-white"
+                  isHomePage ? "text-white" : "text-gray-900"
                 }`}
               />
             )}

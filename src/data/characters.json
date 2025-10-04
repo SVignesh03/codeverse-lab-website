@@ -1,9 +1,16 @@
 [
   {
     "id": 1,
-    "name": "Vignesh",
+    "name": "Vignesh S",
     "department": "Development",
-    "role": "Full Stack Developer",
-    "file": "vignesh.png"
+    "role": "Full Stack Developer | Founder",
+    "file": "https://res.cloudinary.com/dau24dmlo/image/upload/v1759600457/vignesh_a7yt8s.png"
+  },
+  {
+    "id": 2,
+    "name": "Athithyan K",
+    "department": "Marketing",
+    "role": "HR | Co-Founder",
+    "file": "https://res.cloudinary.com/dau24dmlo/image/upload/v1759601484/Athithyan_qtyyem.png"
   }
 ]

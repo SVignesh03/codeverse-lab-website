@@ -27,7 +27,10 @@ export default function HeroSection() {
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover z-0 bg-black"
       >
-        <source src="/video/world.mp4" type="video/mp4" />
+        <source
+          src="https://res.cloudinary.com/dau24dmlo/video/upload/v1759601661/world_ebtarv.mp4"
+          type="video/mp4"
+        />
         Your browser does not support the video tag.
       </video>
 
@@ -65,7 +68,7 @@ export default function HeroSection() {
           >
             Codeverse Lab
             <motion.img
-              src="/common/underscore.svg"
+              src="https://res.cloudinary.com/dau24dmlo/image/upload/v1759604048/underscore_wnmacg.svg"
               alt="Design"
               className="absolute left-0 bottom-[-10px] w-48 sm:w-64 md:w-full"
               initial={{ opacity: 0, scale: 0.8 }}

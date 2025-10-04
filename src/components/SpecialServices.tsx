@@ -32,7 +32,7 @@ export default function SpecialServices() {
             >
               <div className="relative w-full h-40 mb-4 flex items-center justify-center">
                 <Image
-                  src={`/assets/img/services/${service.image}`}
+                  src={service.image}
                   alt={service.title}
                   fill
                   className="object-contain"

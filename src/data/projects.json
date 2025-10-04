@@ -4,7 +4,7 @@
     "title": "Fish Meat Sale Website",
     "category": "E-commerce",
     "description": "Modern e-commerce website with clean design and smooth animations",
-    "image": "/projects/fish-website.png",
+    "image": "https://res.cloudinary.com/dau24dmlo/image/upload/v1759603250/fish-website_er3ony.png",
     "technologies": [
       "React",
       "Next.js",
@@ -12,6 +12,23 @@
       "Vite",
       "TypeScript",
       "Clerk"
+    ],
+    "liveUrl": "#"
+  },
+  {
+    "id": 2,
+    "title": "Mini Search Engine",
+    "category": "Web Development",
+    "description": "A mini search engine that provides relevant search results with a clean and intuitive interface.",
+    "image": "https://res.cloudinary.com/dau24dmlo/image/upload/v1759603282/mini-search-engine_g4uubc.png",
+    "technologies": [
+      "React",
+      "Tailwind CSS",
+      "Vite",
+      "TypeScript",
+      "Python",
+      "Flask",
+      "SQLite"
     ],
     "liveUrl": "#"
   }

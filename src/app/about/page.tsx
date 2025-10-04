@@ -5,6 +5,8 @@ import { Users, Target, Rocket, Clock } from "lucide-react";
 import Image from "next/image";
 import stats from "@/data/stats.json";
 import values from "@/data/values.json";
+import team from "@/data/founders.json";
+import FoundersCard  from "@/components/FoundersCard";
 
 // Mapping icon names from JSON to actual components
 const iconMap = {
@@ -20,6 +22,13 @@ type Stat = {
   icon: IconKey;
   label: string;
   value: string;
+};
+
+type TeamMember = {
+  name: string;
+  role: string;
+  image: string;
+  description: string;
 };
 
 export default function AboutPage() {
@@ -113,13 +122,61 @@ export default function AboutPage() {
               className="relative h-96 rounded-2xl overflow-hidden"
             >
               <Image
-                src="/common/about-us.png"
+                src="https://res.cloudinary.com/dau24dmlo/image/upload/v1759602556/about-us_umjsgj.png"
                 alt="about us"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-300"
               />
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Founders Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Section heading */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-orange-600 mb-4">
+              Meet the Founders
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Creative, driven, and ready to bring ideas to life.
+            </p>
+          </motion.div>
+
+          {/* Cards with stagger animation */}
+          <motion.div
+            className="flex flex-wrap justify-center gap-10"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={{
+              hidden: {},
+              visible: {
+                transition: { staggerChildren: 0.2 },
+              },
+            }}
+          >
+            {(team as TeamMember[]).map((member) => (
+              <motion.div
+                key={member.name}
+                variants={{
+                  hidden: { opacity: 0, y: 40 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+              >
+                <FoundersCard {...member} />
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </section>
 

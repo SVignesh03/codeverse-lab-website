@@ -2,37 +2,37 @@
   {
     "title": "Web Design",
     "text": "Crafting visually stunning and user-friendly interfaces that elevate brand identity and user experience.",
-    "image": "special_services02.svg",
+    "image": "https://res.cloudinary.com/dau24dmlo/image/upload/v1759601923/special_services02_wa4mws.svg",
     "delay": 0
   },
   {
     "title": "UI Design",
     "text": "Designing intuitive, responsive layouts to ensure seamless interaction across all platforms.",
-    "image": "special_services03.svg",
+    "image": "https://res.cloudinary.com/dau24dmlo/image/upload/v1759601958/special_services03_pox6hy.svg",
     "delay": 100
   },
   {
     "title": "Web Development",
     "text": "Building scalable, performant websites and applications using modern web technologies.",
-    "image": "special_services04.svg",
+    "image": "https://res.cloudinary.com/dau24dmlo/image/upload/v1759601992/special_services04_jjdcn4.svg",
     "delay": 200
   },
   {
     "title": "Support",
     "text": "Providing reliable, ongoing technical support to ensure systems run smoothly and issues are resolved quickly.",
-    "image": "special_services06.svg",
+    "image": "https://res.cloudinary.com/dau24dmlo/image/upload/v1759602049/special_services06_ekcy3i.svg",
     "delay": 300
   },
   {
     "title": "Automation",
     "text": "Streamlining workflows with intelligent automation to boost efficiency and reduce manual effort.",
-    "image": "special_services01.svg",
+    "image": "https://res.cloudinary.com/dau24dmlo/image/upload/v1759601889/special_services01_rkuyyv.svg",
     "delay": 400
   },
   {
     "title": "Data Engineering",
     "text": "Designing robust data pipelines and infrastructure to support real-time analytics and decision-making.",
-    "image": "special_services05.svg",
+    "image": "https://res.cloudinary.com/dau24dmlo/image/upload/v1759602019/special_services05_htwatu.svg",
     "delay": 500
   }
 ]
