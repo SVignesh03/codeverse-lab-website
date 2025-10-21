@@ -36,51 +36,57 @@ const TestimonialSection: React.FC = () => {
   const sliderSettings = {
     dots: false,
     infinite: true,
-    speed: 600,
+    speed: 700,
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    pauseOnHover: true,
+    cssEase: "ease-in-out",
+    swipeToSlide: true,
     centerMode: false,
     prevArrow: <CustomPrevArrow />,
     nextArrow: <CustomNextArrow />,
     responsive: [
       {
         breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-        },
+        settings: { slidesToShow: 2 },
       },
       {
         breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-        },
+        settings: { slidesToShow: 1 },
       },
     ],
   };
 
   const renderTestimonial = (item: (typeof testimonials)[0]) => (
-    <div className="px-4">
-      <div className="p-6 bg-white border border-orange-100 rounded-2xl shadow-sm h-full text-left hover:shadow-md transition">
-        <div className="flex items-center mb-4">
-          <Image
-            src="/assets/img/testimonial/default.png"
-            alt="..."
-            width={48}
-            height={48}
-            className="rounded-full"
-          />
-          <div>
-            <h4 className="text-lg font-semibold text-orange-900">
-              {item.name}
-            </h4>
-            <p className="text-sm text-orange-500">{item.role}</p>
+    <div className="px-4" key={item.name}>
+      {/* Make this div a flex container with full height to keep consistent size */}
+      <div className="p-6 bg-white border border-orange-100 rounded-2xl shadow-sm h-full flex flex-col justify-between text-left hover:shadow-md transition min-h-[300px]">
+        <div>
+          <div className="flex items-center mb-4">
+            <Image
+              src="/assets/img/testimonial/default.png"
+              alt={item.name}
+              width={48}
+              height={48}
+              className="rounded-full mr-3"
+            />
+            <div>
+              <h4 className="text-lg font-semibold text-orange-900">
+                {item.name}
+              </h4>
+              <p className="text-sm text-orange-500">{item.role}</p>
+            </div>
+            <div className="ml-auto text-orange-500 font-semibold flex items-center">
+              <span className="text-xl mr-1">★</span>({item.rating})
+            </div>
           </div>
-          <div className="ml-auto text-orange-500 font-semibold flex items-center">
-            <span className="text-xl mr-1">★</span>({item.rating})
-          </div>
+          <p className="text-orange-900/80 text-sm leading-relaxed">
+            {item.message}
+          </p>
         </div>
-        <p className="text-orange-900/80 text-sm">{item.message}</p>
       </div>
     </div>
   );
@@ -97,8 +103,10 @@ const TestimonialSection: React.FC = () => {
 
         <div className="relative">
           {testimonials.length < 3 ? (
-            <div className="max-w-md mx-auto">
-              {renderTestimonial(testimonials[0])}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+              {testimonials.map((item, index) => (
+                <div key={index}>{renderTestimonial(item)}</div>
+              ))}
             </div>
           ) : (
             <Slider {...sliderSettings}>

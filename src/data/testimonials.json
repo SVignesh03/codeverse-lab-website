@@ -2,8 +2,15 @@
   {
     "name": "Rubesh",
     "image": "/assets/img/testimonial/default.png",
-    "role": "Fish website owner",
+    "role": "Fish website client",
     "rating": 4.8,
     "message": "Working with Codeverse Lab has been an absolute game-changer for our business. From the very beginning, they took the time to deeply understand our vision and transformed it into a sleek, high-performing digital product."
+  },
+  {
+    "name": "Mahimariya",
+    "image": "/assets/img/testimonial/default.png",
+    "role": "Mini search engine client",
+    "rating": 4.9,
+    "message": "The Mini Search Engine project developed by Codeverse Lab is impressive. It shows a good understanding of Web crawling and Indexing. The interface is clean and functional, and the search mechanism performs effectively. With few enhancements, like add extra contents about the search query and smart suggestions will make it more powerful. Great Job!!"
   }
 ]
