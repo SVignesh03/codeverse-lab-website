@@ -37,7 +37,7 @@ export default function AppImageCard({
     >
       <div className="relative w-full h-full flex items-center justify-center bg-orange-100 rounded-xl">
         <Image
-          src={`/images/${file}`}
+          src={file}
           alt=""
           layout="fill"
           objectFit="contain"

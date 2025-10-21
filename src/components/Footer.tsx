@@ -21,7 +21,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <Image
-                src="/logo.png"
+                src="https://res.cloudinary.com/dau24dmlo/image/upload/v1750933747/Codeverse_Lab_xzrfyo.png"
                 alt="Codeverse Lab Logo"
                 width={60}
                 height={60}
@@ -79,7 +79,7 @@ const Footer = () => {
                       {item}
                     </Link>
                   </li>
-                ),
+                )
               )}
             </ul>
           </div>
