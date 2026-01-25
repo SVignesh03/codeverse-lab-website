@@ -4,7 +4,6 @@ import {
   Mail,
   Phone,
   MapPin,
-  Twitter,
   Linkedin,
   Instagram,
   Youtube,
@@ -43,14 +42,10 @@ const Footer = () => {
                 <Youtube className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/codeverse-lab/"
                 className="text-gray-400 hover:text-orange-500 transition-colors"
-              >
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-orange-500 transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
@@ -79,7 +74,7 @@ const Footer = () => {
                       {item}
                     </Link>
                   </li>
-                )
+                ),
               )}
             </ul>
           </div>
