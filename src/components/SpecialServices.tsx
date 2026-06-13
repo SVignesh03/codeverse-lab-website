@@ -40,22 +40,22 @@ export default function SpecialServices() {
                   data-aos="fade-up"
                   data-aos-delay={service.delay}
                 > */}
-                  <div className="relative w-full h-40 mb-4 flex items-center justify-center">
-                    <Image
-                      src={service.image}
-                      alt={service.title}
-                      fill
-                      className="object-contain"
-                    />
-                  </div>
+                <div className="relative w-full h-40 mb-4 flex items-center justify-center">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
 
-                  <div>
-                    <h5 className="text-xl font-semibold mb-2">
-                      {service.title}
-                    </h5>
+                <div>
+                  <h5 className="text-xl font-semibold mb-2">
+                    {service.title}
+                  </h5>
 
-                    <p className="text-sm text-gray-600">{service.text}</p>
-                  </div>
+                  <p className="text-sm text-gray-600">{service.text}</p>
+                </div>
                 {/* </div> */}
               </SpotlightCard>
             </div>

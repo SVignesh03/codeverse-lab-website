@@ -14,7 +14,7 @@ const createTextVariants = (i: number): TargetAndTransition => ({
 });
 
 const paragraph =
-  "Codeverse Lab helps you bring your ideas to life through thoughtful strategy, design, and development—crafted with care, from start to finish.";
+  "Codeverse Lab develops modern software solutions tailored to your business from custom web applications and APIs to AI-driven systems and automation workflows.";
 
 export default function HeroSection() {
   return (
@@ -28,7 +28,7 @@ export default function HeroSection() {
         className="absolute top-0 left-0 w-full h-full object-cover z-0 bg-black"
       >
         <source
-          src="https://res.cloudinary.com/dau24dmlo/video/upload/v1759601661/world_ebtarv.mp4"
+          src="https://res.cloudinary.com/dau24dmlo/video/upload/v1781357245/canvas-background_flpkhs.mp4"
           type="video/mp4"
         />
         Your browser does not support the video tag.
@@ -42,12 +42,12 @@ export default function HeroSection() {
         {/* Heading */}
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold font-space-grotesk mb-6 leading-tight tracking-wide flex flex-wrap justify-center">
           {[
-            "Imagine,",
-            "Design,",
-            "and",
-            "Build",
-            "Your",
-            "Vision",
+            "Software",
+            "That",
+            "Solves",
+            "Real",
+            "Business",
+            "Problems",
             "with",
           ].map((word, i) => (
             <motion.span
@@ -101,7 +101,7 @@ export default function HeroSection() {
         >
           <a href="/contact">
             <button className="bg-gradient-to-r from-orange-500 to-amber-500 text-white rounded-xl font-space-grotesk px-4 py-2 focus:outline-none focus:ring-2 focus:ring-offset-2 cursor-pointer">
-              Schedule a Free Consultation
+              Start Your Project
             </button>
           </a>
         </motion.div>

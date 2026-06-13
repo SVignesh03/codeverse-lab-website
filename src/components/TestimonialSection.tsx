@@ -64,10 +64,9 @@ const TestimonialSection: React.FC = () => {
   const renderTestimonial = (item: (typeof testimonials)[0]) => (
     <div className="px-4" key={item.name}>
       {/* Make this div a flex container with full height to keep consistent size */}
-      <SpotlightCard 
-      className="p-6 bg-white border border-orange-100 rounded-2xl shadow-sm h-full flex flex-col justify-between text-left hover:shadow-md transition min-h-[300px]"
-      spotlightColor="rgba(255, 237, 212, 1.000)"
-      
+      <SpotlightCard
+        className="p-6 bg-white border border-orange-100 rounded-2xl shadow-sm h-full flex flex-col justify-between text-left hover:shadow-md transition min-h-[300px]"
+        spotlightColor="rgba(255, 237, 212, 1.000)"
       >
         <div>
           <div className="flex items-center mb-4">

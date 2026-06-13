@@ -47,7 +47,7 @@ const Header = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <Image
-              src="https://res.cloudinary.com/dau24dmlo/image/upload/v1750933747/Codeverse_Lab_xzrfyo.png"
+              src="https://res.cloudinary.com/dau24dmlo/image/upload/v1781356851/Untitled_design_2_ezhdne.png"
               alt="Codeverse Lab Logo"
               width={60}
               height={60}

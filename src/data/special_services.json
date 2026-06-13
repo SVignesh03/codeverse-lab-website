@@ -1,37 +1,37 @@
 [
   {
-    "title": "Web Design",
-    "text": "Crafting visually stunning and user-friendly interfaces that elevate brand identity and user experience.",
+    "title": "Custom Software Development",
+    "text": "Building tailored software solutions that solve real business problems, improve efficiency, and support long-term growth.",
     "image": "https://res.cloudinary.com/dau24dmlo/image/upload/v1759601923/special_services02_wa4mws.svg",
     "delay": 0
   },
   {
-    "title": "UI Design",
-    "text": "Designing intuitive, responsive layouts to ensure seamless interaction across all platforms.",
+    "title": "SaaS Development",
+    "text": "Designing and developing scalable SaaS platforms, dashboards, portals, and business management systems.",
     "image": "https://res.cloudinary.com/dau24dmlo/image/upload/v1759601958/special_services03_pox6hy.svg",
     "delay": 100
   },
   {
-    "title": "Web Development",
-    "text": "Building scalable, performant websites and applications using modern web technologies.",
+    "title": "AI Solutions",
+    "text": "Integrating AI-powered capabilities such as chatbots, intelligent workflows, sentiment analysis, and business automation.",
     "image": "https://res.cloudinary.com/dau24dmlo/image/upload/v1759601992/special_services04_jjdcn4.svg",
     "delay": 200
   },
   {
-    "title": "Support",
-    "text": "Providing reliable, ongoing technical support to ensure systems run smoothly and issues are resolved quickly.",
-    "image": "https://res.cloudinary.com/dau24dmlo/image/upload/v1759602049/special_services06_ekcy3i.svg",
+    "title": "API Development",
+    "text": "Developing secure and scalable REST APIs, third-party integrations, authentication systems, and backend services.",
+    "image": "https://res.cloudinary.com/dau24dmlo/image/upload/v1759601889/special_services01_rkuyyv.svg",
     "delay": 300
   },
   {
-    "title": "Automation",
-    "text": "Streamlining workflows with intelligent automation to boost efficiency and reduce manual effort.",
-    "image": "https://res.cloudinary.com/dau24dmlo/image/upload/v1759601889/special_services01_rkuyyv.svg",
+    "title": "Business Automation",
+    "text": "Streamlining operations through workflow automation, WhatsApp integrations, webhooks, and intelligent business processes.",
+    "image": "https://res.cloudinary.com/dau24dmlo/image/upload/v1759602049/special_services06_ekcy3i.svg",
     "delay": 400
   },
   {
     "title": "Data Engineering",
-    "text": "Designing robust data pipelines and infrastructure to support real-time analytics and decision-making.",
+    "text": "Building reliable data pipelines, ETL workflows, healthcare data systems, and analytics infrastructure.",
     "image": "https://res.cloudinary.com/dau24dmlo/image/upload/v1759602019/special_services05_htwatu.svg",
     "delay": 500
   }

@@ -2,31 +2,31 @@
   {
     "step": "01",
     "title": "Discovery",
-    "description": "We start by understanding your business, goals, and target audience through detailed consultation."
+    "description": "We understand your business requirements, challenges, goals, and technical needs through detailed discussions."
   },
   {
     "step": "02",
-    "title": "Strategy",
-    "description": "We develop a comprehensive strategy and project roadmap tailored to your specific needs."
+    "title": "Planning",
+    "description": "We define the project scope, architecture, technology stack, timeline, and delivery roadmap."
   },
   {
     "step": "03",
     "title": "Design",
-    "description": "Our designers create stunning visuals and user experiences that align with your brand."
+    "description": "We create intuitive user experiences, workflows, and interfaces that align with your business objectives."
   },
   {
     "step": "04",
     "title": "Development",
-    "description": "Our developers bring the designs to life with clean, efficient, and scalable code."
+    "description": "We build scalable applications, APIs, automations, and business systems using modern technologies."
   },
   {
     "step": "05",
-    "title": "Testing",
-    "description": "Rigorous testing ensures everything works perfectly across all devices and browsers."
+    "title": "Testing & Review",
+    "description": "Every feature is thoroughly tested to ensure performance, security, reliability, and usability."
   },
   {
     "step": "06",
-    "title": "Launch",
-    "description": "We deploy your project and provide ongoing support to ensure continued success."
+    "title": "Deployment & Support",
+    "description": "We deploy your solution, monitor performance, and provide ongoing maintenance and improvements."
   }
 ]

@@ -1,22 +1,22 @@
 [
   {
     "title": "Innovation",
-    "description": "We stay ahead of the curve with cutting-edge technologies and creative solutions.",
+    "description": "We leverage modern technologies, automation, and AI-driven solutions to solve complex business challenges efficiently.",
     "icon": "💡"
   },
   {
     "title": "Quality",
-    "description": "Every project is crafted with meticulous attention to detail and highest standards.",
+    "description": "We build reliable, scalable, and maintainable software with a strong focus on performance and long-term value.",
     "icon": "⭐"
   },
   {
-    "title": "Collaboration",
-    "description": "We work closely with our clients as partners to achieve shared success.",
+    "title": "Partnership",
+    "description": "We work closely with clients, treating every project as a collaborative effort toward shared success.",
     "icon": "🤝"
   },
   {
     "title": "Transparency",
-    "description": "Open communication and honest feedback throughout every project phase.",
+    "description": "Clear communication, realistic timelines, and honest feedback guide every stage of our development process.",
     "icon": "🔍"
   }
 ]

@@ -6,7 +6,7 @@ import Image from "next/image";
 import stats from "@/data/stats.json";
 import values from "@/data/values.json";
 import team from "@/data/founders.json";
-import FoundersCard  from "@/components/FoundersCard";
+import FoundersCard from "@/components/FoundersCard";
 
 // Mapping icon names from JSON to actual components
 const iconMap = {
@@ -100,19 +100,19 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-gray-600">
                 <p>
-                  Founded in 2022, Codeverse Lab began as a small team of
-                  passionate developers and designers who believed that great
-                  digital experiences could transform businesses.
+                  Codeverse Lab was founded with a simple mission: build
+                  technology that solves real business problems.
                 </p>
                 <p>
-                  What started as a vision to bridge the gap between creative
-                  design and robust development has grown into a full-service
-                  digital agency that partners with businesses of all sizes.
+                  From custom software and SaaS platforms to automation
+                  workflows and AI integrations, we help businesses leverage
+                  modern technology to improve efficiency, accelerate growth,
+                  and create better digital experiences.
                 </p>
                 <p>
-                  Today, we continue to push boundaries, embrace new
-                  technologies, and deliver solutions that not only meet our
-                  client&apos;s needs but exceed their expectations.
+                  Every solution we build is driven by one goal in mind:
+                  delivering measurable value through thoughtful design,
+                  reliable engineering, and long-term scalability.
                 </p>
               </div>
             </motion.div>

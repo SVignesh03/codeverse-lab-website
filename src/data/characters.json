@@ -12,5 +12,12 @@
     "department": "Marketing",
     "role": "HR | Co-Founder",
     "file": "https://res.cloudinary.com/dau24dmlo/image/upload/v1759601484/Athithyan_qtyyem.png"
+  },
+  {
+    "id": 3,
+    "name": "Sutharsan R",
+    "department": "Design",
+    "role": "UI/UX Designer | Co-Founder",
+    "file": "https://res.cloudinary.com/dau24dmlo/image/upload/v1781332595/suthan_mxojlt.png"
   }
 ]

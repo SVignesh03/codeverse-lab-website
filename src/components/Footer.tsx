@@ -20,7 +20,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <Image
-                src="https://res.cloudinary.com/dau24dmlo/image/upload/v1750933747/Codeverse_Lab_xzrfyo.png"
+                src="https://res.cloudinary.com/dau24dmlo/image/upload/v1781356851/Untitled_design_2_ezhdne.png"
                 alt="Codeverse Lab Logo"
                 width={60}
                 height={60}
@@ -56,6 +56,21 @@ const Footer = () => {
                 rel="noopener noreferrer"
               >
                 <Instagram className="w-5 h-5" />
+              </a>
+              <a
+                href="https://jsdl.in/DT-202X1WAN4MG"
+                className="text-gray-400 hover:text-orange-500 transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Justdial"
+              >
+                <Image
+                  src="https://res.cloudinary.com/dau24dmlo/image/upload/v1781355856/justdial-jd-logo-01_rimmyx.png"
+                  alt="Justdial"
+                  width={20}
+                  height={20}
+                  className="opacity-70 hover:opacity-100 transition-opacity"
+                />
               </a>
             </div>
           </div>
@@ -110,10 +125,10 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-orange-500" />
                 <a
-                  href="mailto:vickypedrosa0@gmail.com"
+                  href="mailto:codeverselab2025@gmail.com"
                   className="text-gray-400 text-sm hover:text-orange-600 transition"
                 >
-                  vickypedrosa0@gmail.com
+                  codeverselab2025@gmail.com
                 </a>
               </div>
 

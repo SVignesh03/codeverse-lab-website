@@ -1,9 +1,9 @@
 [
   {
     "id": 1,
-    "title": "Fish Meat Sale Website",
+    "title": "Fish & Meat E-Commerce Platform",
     "category": "E-commerce",
-    "description": "Modern e-commerce website with clean design and smooth animations",
+    "description": "Complete e-commerce platform for ordering fresh fish and meat online with product management, customer ordering, and responsive user experience.",
     "image": "https://res.cloudinary.com/dau24dmlo/image/upload/v1759603250/fish-website_er3ony.png",
     "technologies": [
       "React",
@@ -17,19 +17,76 @@
   },
   {
     "id": 2,
-    "title": "Mini Search Engine",
+    "title": "Second-Hand Vehicle Marketplace",
+    "category": "E-commerce",
+    "description": "Online marketplace for buying and selling second-hand bikes and cars with listing management and user-friendly search experience.",
+    "image": "https://res.cloudinary.com/dau24dmlo/image/upload/v1759185555/second_hand_vehicle_qrbogr.png",
+    "technologies": ["Next.js", "React", "Tailwind CSS", "Node.js"],
+    "liveUrl": "#"
+  },
+  {
+    "id": 3,
+    "title": "RSV Fitness Studio Management System",
     "category": "Web Development",
-    "description": "A mini search engine that provides relevant search results with a clean and intuitive interface.",
-    "image": "https://res.cloudinary.com/dau24dmlo/image/upload/v1759603282/mini-search-engine_g4uubc.png",
+    "description": "Comprehensive gym management platform for member registration, attendance tracking, subscription plans, and business operations.",
+    "image": "https://res.cloudinary.com/dau24dmlo/image/upload/v1781185890/screencapture-localhost-3000-sign-in-2026-05-15-11_49_50_dvrb38.png",
     "technologies": [
+      "Next.js",
       "React",
-      "Tailwind CSS",
-      "Vite",
       "TypeScript",
-      "Python",
-      "Flask",
-      "SQLite"
+      "Tailwind CSS",
+      "JWT",
+      "RBAC"
     ],
+    "liveUrl": "https://rsvfitnesstvl.netlify.app/"
+  },
+  {
+    "id": 4,
+    "title": "Bar Vault Inventory Management",
+    "category": "Web Development",
+    "description": "Inventory and stock management system designed to streamline business operations, product tracking, and reporting.",
+    "image": "https://res.cloudinary.com/dau24dmlo/image/upload/v1781185856/screencapture-bar-eta-five-vercel-app-login-2026-06-07-20_57_44_rcnwfv.png",
+    "technologies": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "React Native",
+      "Tailwind CSS",
+      "RBAC"
+    ],
+    "liveUrl": "#"
+  },
+  {
+    "id": 5,
+    "title": "RSV WhatsApp Bot",
+    "category": "Automation",
+    "description": "WhatsApp automation solution for handling customer interactions, business communication, and automated workflows.",
+    "image": "https://res.cloudinary.com/dau24dmlo/image/upload/v1759185554/ChatBot_picspo.png",
+    "technologies": [
+      "Node.js",
+      "Baileys",
+      "Automation",
+      "MongoDB",
+      "CRON Jobs"
+    ],
+    "liveUrl": "#"
+  },
+  {
+    "id": 6,
+    "title": "Business Branding & Logo Design",
+    "category": "Branding & Marketing",
+    "description": "Designed brand identity, logo concepts, and visual assets to establish a professional and memorable business presence.",
+    "image": "https://res.cloudinary.com/dau24dmlo/image/upload/v1781351984/138-logos_nww5b8.jpg",
+    "technologies": ["Figma", "Adobe Illustrator", "Photoshop", "Canva"],
+    "liveUrl": "#"
+  },
+  {
+    "id": 7,
+    "title": "Meta Ads Campaign Management",
+    "category": "Branding & Marketing",
+    "description": "Managed Meta advertising campaigns with audience targeting, creative optimization, and lead generation strategies.",
+    "image": "https://res.cloudinary.com/dau24dmlo/image/upload/v1781352243/ad-campaigns_edn0r0.png",
+    "technologies": ["Meta Ads", "Facebook Ads", "Instagram Ads", "Analytics"],
     "liveUrl": "#"
   }
 ]

@@ -8,10 +8,10 @@ import projects from "@/data/projects.json";
 
 const categories = [
   "All",
-  "Web Design",
   "Web Development",
-  "Mobile Apps",
   "E-commerce",
+  "Automation",
+  "Branding & Marketing",
 ];
 
 export default function PortfolioPage() {

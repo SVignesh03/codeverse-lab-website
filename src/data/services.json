@@ -1,57 +1,52 @@
 [
   {
-    "icon": "Palette",
-    "title": "Web Design",
-    "description": "Beautiful, user-centered designs that captivate and convert",
-    "features": [
-      "UI/UX Design",
-      "Responsive Design",
-      "Brand Integration",
-      "Prototyping"
-    ]
-  },
-  {
     "icon": "Code",
-    "title": "Web Development",
-    "description": "Robust, scalable websites built with modern technologies",
+    "title": "Custom Software Development",
+    "description": "Tailored software solutions built to solve real business challenges and streamline operations.",
     "features": [
-      "Custom Development",
-      "CMS Integration",
-      "API Development",
-      "Performance Optimization"
-    ]
-  },
-  {
-    "icon": "Smartphone",
-    "title": "Mobile Apps",
-    "description": "Native and cross-platform mobile applications",
-    "features": [
-      "iOS Development",
-      "Android Development",
-      "React Native",
-      "App Store Optimization"
-    ]
-  },
-  {
-    "icon": "ShoppingCart",
-    "title": "E-commerce",
-    "description": "Complete online stores that drive sales and growth",
-    "features": [
-      "Shopify Development",
-      "WooCommerce",
-      "Payment Integration",
+      "Business Applications",
+      "Admin Dashboards",
+      "CRM Systems",
       "Inventory Management"
     ]
   },
   {
-    "icon": "BarChart3",
-    "title": "Analytics & Insights",
-    "description": "Data-driven insights to optimize your digital presence",
+    "icon": "Monitor",
+    "title": "SaaS Development",
+    "description": "Scalable SaaS platforms designed for startups, businesses, and growing organizations.",
     "features": [
-      "Google Analytics",
-      "Conversion Tracking",
-      "Performance Reports",
-      "A/B Testing"
+      "Multi-Tenant Architecture",
+      "Role-Based Access",
+      "Subscription Systems",
+      "Cloud Deployment"
     ]
+  },
+  {
+    "icon": "ShoppingCart",
+    "title": "E-commerce Solutions",
+    "description": "Modern online stores and marketplace platforms optimized for growth and user experience.",
+    "features": [
+      "Custom Storefronts",
+      "Payment Integration",
+      "Inventory Management",
+      "Order Tracking"
+    ]
+  },
+  {
+    "icon": "Workflow",
+    "title": "Automation & Integrations",
+    "description": "Automating workflows and connecting systems to improve efficiency and reduce manual work.",
+    "features": [
+      "WhatsApp Automation",
+      "API Integrations",
+      "Webhooks",
+      "Business Workflows"
+    ]
+  },
+  {
+    "icon": "Palette",
+    "title": "Branding & Marketing",
+    "description": "Building memorable brands through design, visual identity, and digital marketing campaigns.",
+    "features": ["Logo Design", "Brand Identity", "Meta Ads", "Creative Assets"]
   }
 ]
