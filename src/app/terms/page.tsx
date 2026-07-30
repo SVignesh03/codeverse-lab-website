@@ -243,20 +243,20 @@ export default function TermsOfServicePage() {
               <p className="text-white font-semibold">Codeverse Lab</p>
 
               <a
-                href="mailto:codeverselab2025@gmail.com"
+                href="mailto:support@codeverselab.com"
                 className="flex items-center gap-2 text-orange-500 hover:underline w-fit"
               >
                 <Mail className="w-4 h-4" />
-                codeverselab2025@gmail.com
+                support@codeverselab.com
               </a>
 
               <Link
-                href="https://codeverse-lab-website.vercel.app/"
+                href="https://www.codeverselab.com/"
                 target="_blank"
                 className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors w-fit pt-1"
               >
                 <span className="underline">
-                  https://codeverse-lab-website.vercel.app/
+                  https://www.codeverselab.com/
                 </span>
                 <ExternalLink className="w-3.5 h-3.5 text-slate-500" />
               </Link>

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Send, ShieldCheck } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -19,6 +19,7 @@ const contactSchema = z.object({
   company: z.string().optional(),
   service: z.string().min(1, "Please select a service"),
   budget: z.string().min(1, "Please select a budget range"),
+  promoCode: z.string().optional(),
   message: z.string().min(10, "Message must be at least 10 characters"),
 });
 
@@ -33,11 +34,55 @@ export default function ContactPage() {
   const {
     register,
     handleSubmit,
+    getValues,
     formState: { errors },
     reset,
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
   });
+
+  const [promoStatus, setPromoStatus] = useState<{
+    loading: boolean;
+    applied: boolean;
+    message: string;
+  }>({ loading: false, applied: false, message: "" });
+
+  const handleApplyPromo = async () => {
+    const code = getValues("promoCode");
+    if (!code) return;
+
+    setPromoStatus({ loading: true, applied: false, message: "" });
+
+    try {
+      const res = await fetch("/api/validate-promo", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ promoCode: code }),
+      });
+      const data = await res.json();
+
+      if (data.valid) {
+        setPromoStatus({
+          loading: false,
+          applied: true,
+          message: `✓ ${data.message} (${data.discount})`,
+        });
+      } else {
+        setPromoStatus({
+          loading: false,
+          applied: false,
+          message: data.message || "Invalid promo code",
+        });
+      }
+    } catch (error) {
+      console.error("Promo validation error:", error);
+      setPromoStatus({
+        loading: false,
+        applied: false,
+        message: "Failed to validate code.",
+      });
+    }
+  };
 
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
@@ -59,7 +104,7 @@ export default function ContactPage() {
       console.log("✅ Message sent:", result);
 
       setIsSubmitted(true);
-      reset(); // reset form if using react-hook-form
+      reset();
     } catch (error) {
       console.error("❌ Error sending message:", error);
       alert("There was an error sending your message. Please try again later.");
@@ -121,7 +166,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Email</h3>
-                    <p className="text-gray-600">codeverselab2025@gmail.com</p>
+                    <p className="text-gray-600">support@codeverselab.com</p>
                   </div>
                 </div>
 
@@ -137,11 +182,27 @@ export default function ContactPage() {
 
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
+                    <svg
+                      className="w-6 h-6 fill-current text-orange-600"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.4 0 11.91 0c3.152.001 6.116 1.23 8.344 3.463 2.23 2.231 3.456 5.197 3.455 8.353-.003 6.56-5.339 11.907-11.849 11.907-2.012-.001-3.992-.513-5.744-1.487L0 24zm5.835-4.267l.37.22c1.554.922 3.39 1.41 5.27 1.412 5.399 0 9.792-4.393 9.795-9.794.002-2.617-1.018-5.078-2.873-6.935C16.58 2.78 14.12 1.76 11.5 1.76c-5.4 0-9.794 4.393-9.796 9.795-.001 1.957.513 3.865 1.488 5.56l.24.417-1.01 3.69 3.774-.99.42-.249zm12.35-5.908c-.329-.165-1.953-.965-2.251-1.074-.3-.11-.518-.165-.736.165-.218.33-.846 1.074-1.037 1.293-.191.218-.383.245-.712.08-1.548-.773-2.554-1.353-3.574-3.104-.266-.457.266-.425.762-1.418.083-.165.042-.31-.02-.444-.064-.135-.518-1.25-.71-1.71-.187-.45-.377-.389-.517-.396l-.44-.007c-.153 0-.4-.058-.61.173-.21.23-.803.784-.803 1.913 0 1.128.82 2.218.934 2.371.114.153 1.614 2.463 3.91 3.455.547.235.973.375 1.306.481.55.174 1.05.15 1.446.09.44-.067 1.953-.797 2.228-1.53.275-.733.275-1.363.192-1.493-.083-.131-.3-.211-.63-.376z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900">WhatsApp</h3>
+                    <p className="text-gray-600">+91 96779 02003</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
                     <MapPin className="w-6 h-6 text-orange-600" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Location</h3>
-                    <p className="text-gray-600">India</p>
+                    <p className="text-gray-600">Tamil Nadu, India</p>
                   </div>
                 </div>
 
@@ -154,6 +215,36 @@ export default function ContactPage() {
                       Business Hours
                     </h3>
                     <p className="text-gray-600">Mon - Fri: 9AM - 6PM IST</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Official Business Verification Info Card */}
+              <div className="pt-4">
+                <div className="p-6 bg-gray-50 rounded-2xl border border-gray-200">
+                  <div className="flex items-center space-x-2 mb-3">
+                    <ShieldCheck className="w-5 h-5 text-orange-600" />
+                    <h4 className="text-sm font-bold text-gray-900 uppercase tracking-wider">
+                      Official Business Details
+                    </h4>
+                  </div>
+                  <div className="space-y-1 text-sm text-gray-600">
+                    <p>
+                      <strong className="text-gray-800">Legal Entity:</strong>{" "}
+                      Codeverse Lab
+                    </p>
+                    <p>
+                      <strong className="text-gray-800">
+                        Govt. MSME Reg No:
+                      </strong>{" "}
+                      UDYAM-TN-18-0101857
+                    </p>
+                    <p>
+                      <strong className="text-gray-800">
+                        Registered Activity:
+                      </strong>{" "}
+                      Computer Programming & Web Design Services
+                    </p>
                   </div>
                 </div>
               </div>
@@ -289,6 +380,41 @@ export default function ContactPage() {
                         </p>
                       )}
                     </div>
+                  </div>
+
+                  {/* Promo Code Section */}
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Promo Code
+                    </label>
+                    <div className="flex gap-2">
+                      <input
+                        {...register("promoCode")}
+                        type="text"
+                        disabled={promoStatus.applied}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent uppercase tracking-wider"
+                        placeholder="Enter code (e.g. SAVE10)"
+                      />
+                      <button
+                        type="button"
+                        onClick={handleApplyPromo}
+                        disabled={promoStatus.loading || promoStatus.applied}
+                        className="px-6 py-3 bg-gradient-to-r from-orange-500 to-amber-500 text-white rounded-lg font-medium hover:shadow-lg transition-colors disabled:opacity-50"
+                      >
+                        {promoStatus.loading
+                          ? "Checking..."
+                          : promoStatus.applied
+                            ? "Applied"
+                            : "Apply"}
+                      </button>
+                    </div>
+                    {promoStatus.message && (
+                      <p
+                        className={`text-sm mt-1.5 ${promoStatus.applied ? "text-green-600 font-medium" : "text-red-500"}`}
+                      >
+                        {promoStatus.message}
+                      </p>
+                    )}
                   </div>
 
                   <div>

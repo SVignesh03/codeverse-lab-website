@@ -88,5 +88,23 @@
     "image": "https://res.cloudinary.com/dau24dmlo/image/upload/v1781352243/ad-campaigns_edn0r0.png",
     "technologies": ["Meta Ads", "Facebook Ads", "Instagram Ads", "Analytics"],
     "liveUrl": "#"
+  },
+  {
+    "id": 8,
+    "title": "@codeverselab/wa-bot",
+    "category": "Open Source",
+    "description": "Lightweight, developer-friendly WhatsApp bot library built on top of Baileys for quick setup, automated messaging, and custom command handling.",
+    "image": "https://res.cloudinary.com/dau24dmlo/image/upload/v1785430877/ChatGPT_Image_Jul_30_2026_10_28_29_PM_ltf9qu.png",
+    "technologies": ["Node.js", "TypeScript", "Baileys", "NPM", "Automation"],
+    "liveUrl": "https://www.npmjs.com/package/@codeverselab/wa-bot"
+  },
+  {
+    "id": 9,
+    "title": "@codeverselab/otp",
+    "category": "Open Source",
+    "description": "Secure, fast, and customizable OTP generation and verification utility for Node.js applications and authentication workflows.",
+    "image": "https://res.cloudinary.com/dau24dmlo/image/upload/v1785431086/ChatGPT_Image_Jul_30_2026_10_34_26_PM_bb4rga.png",
+    "technologies": ["Node.js", "TypeScript", "Crypto", "NPM", "Security"],
+    "liveUrl": "https://www.npmjs.com/package/@codeverselab/otp"
   }
 ]

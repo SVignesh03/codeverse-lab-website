@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Users, Target, Rocket, Clock } from "lucide-react";
+import { Users, Target, Rocket, Clock, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 import stats from "@/data/stats.json";
 import values from "@/data/values.json";
@@ -129,6 +129,42 @@ export default function AboutPage() {
               />
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Official Recognition & Trust Banner */}
+      <section className="py-12 bg-white border-y border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="p-8 bg-gradient-to-r from-orange-50 via-amber-50 to-orange-50 rounded-2xl border border-orange-100 flex flex-col md:flex-row items-center justify-between gap-6"
+          >
+            <div className="flex items-start space-x-4">
+              <div className="p-3 bg-orange-500 text-white rounded-xl shadow-md shrink-0">
+                <ShieldCheck className="w-8 h-8" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-1">
+                  Government Recognized Enterprise
+                </h3>
+                <p className="text-gray-600 text-sm max-w-2xl">
+                  Codeverse Lab is an officially registered MSME (Micro
+                  Enterprise) under the Ministry of Micro, Small & Medium
+                  Enterprises, Govt. of India.
+                </p>
+              </div>
+            </div>
+            <div className="bg-white px-5 py-3 rounded-xl border border-orange-200/80 text-center shrink-0 shadow-sm">
+              <p className="text-xs text-gray-500 uppercase tracking-wider font-semibold">
+                Udyam Registration
+              </p>
+              <p className="text-sm font-bold text-orange-600 tracking-wide mt-0.5">
+                UDYAM-TN-18-0101857
+              </p>
+            </div>
+          </motion.div>
         </div>
       </section>
 

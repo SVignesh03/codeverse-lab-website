@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Code2 } from "lucide-react";
 import Image from "next/image";
 import projects from "@/data/projects.json";
 
@@ -12,6 +12,7 @@ const categories = [
   "E-commerce",
   "Automation",
   "Branding & Marketing",
+  "Open Source",
 ];
 
 export default function PortfolioPage() {
@@ -41,8 +42,8 @@ export default function PortfolioPage() {
               transition={{ delay: 0.2 }}
               className="text-xl text-gray-600 max-w-3xl mx-auto"
             >
-              Explore our latest projects and see how we&apos;ve helped
-              businesses achieve their digital goals
+              Explore our client builds, client solutions, and open-source
+              contributions.
             </motion.p>
           </div>
         </div>
@@ -75,37 +76,65 @@ export default function PortfolioPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group"
+                className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group flex flex-col justify-between"
               >
-                <div className="relative h-64 overflow-hidden">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
-                    <a
-                      href={project.liveUrl}
-                      className="p-3 bg-white rounded-full text-gray-900 hover:bg-gray-100 transition-colors"
-                    >
-                      <ExternalLink className="w-5 h-5" />
-                    </a>
+                <div>
+                  <div className="relative h-64 overflow-hidden">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
+                      {project.liveUrl && project.liveUrl !== "#" && (
+                        <a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="px-4 py-2.5 bg-white rounded-full text-gray-900 font-medium hover:bg-gray-100 transition-colors flex items-center gap-2 text-sm shadow-md"
+                        >
+                          {project.category === "Open Source" ? (
+                            <>
+                              <Code2 className="w-4 h-4 text-orange-600" />
+                              View Package
+                            </>
+                          ) : (
+                            <>
+                              <ExternalLink className="w-4 h-4 text-orange-600" />
+                              Visit Project
+                            </>
+                          )}
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-sm text-orange-600 font-semibold">
+                        {project.category}
+                      </span>
+                      {project.category === "Open Source" && (
+                        <span className="text-xs bg-orange-100 text-orange-800 px-2.5 py-0.5 rounded-full font-medium">
+                          NPM Package
+                        </span>
+                      )}
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      {project.title}
+                    </h3>
+                    <p className="text-gray-600 mb-4 text-sm leading-relaxed">
+                      {project.description}
+                    </p>
                   </div>
                 </div>
-                <div className="p-6">
-                  <div className="text-sm text-orange-600 font-medium mb-2">
-                    {project.category}
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4">{project.description}</p>
-                  <div className="flex flex-wrap gap-2">
+
+                <div className="p-6 pt-0">
+                  <div className="flex flex-wrap gap-2 border-t border-gray-100 pt-4">
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
+                        className="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full font-medium"
                       >
                         {tech}
                       </span>

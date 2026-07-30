@@ -7,7 +7,7 @@ export async function POST(req: Request) {
     const { name, email, phone, service, budget, message } = body;
 
     await sendEmail({
-      to: "codeverselab2025@gmail.com",
+      to: "support@codeverselab.com",
       subject: `Project Alert from ${name}`,
       html: `
         <h2>New Contact Request</h2>
